@@ -26,9 +26,9 @@ Semantic versioning is implemented using bumpversion on commit.
 
 ## TODO
 
-. Complete build system testing.
-. Add tar.gz test to Makefile
-. Move CI/CD build and test environment onto physicals or cloud.
-. Get app and database into a docker stack so we can take better advantage of secret handling or alternatively find a better more general mechanism for managing secrets.
-. Configure jenkins in docker.
-. Fix a problem with the naming of images for sl6 and sl7.
+* Complete build system testing.
+* Add tar.gz test to Makefile
+* Move CI/CD build and test environment onto physicals or cloud.
+* Get app and database into a docker stack so we can take better advantage of secret handling or alternatively find a better more general mechanism for managing secrets.
+* Configure jenkins in docker.
+* Fix a problem with the naming of images for sl6 and sl7.
