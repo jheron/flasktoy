@@ -1,0 +1,22 @@
+#!/bin/sh
+
+OS=`uname -s`
+REV=`uname -r`
+
+git clone https://github.com/jheron/flasktoy.git 
+VERSION=`git describe —tags —abbrev=0` 
+CURRENT=feflask-${OS}-$REV_${VERSION} 
+mkdir feflask 
+cp app.py feflask 
+cp requirements feflask 
+cd feflask 
+virtualenv env 
+source env/bin/activate 
+pip install -r requirements.txt 
+cd .. 
+tar cf feflask-${VERSION}.tar feflask 
+gzip feflask.tar
+shasum ${CURRENT}.tar.gz >${CURRENT}.shasum
+deactivate 
+aws s3 cp ${CURRENT}.tar.gz  s3://feflask/${CURRENT}.tar.gz 
+aws s3 cp ${CURRENT}.shasum  s3://feflask/${CURRENT}.shasum 

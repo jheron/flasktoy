@@ -1,0 +1,2 @@
+bumpversion patch
+git push origin master --tags
