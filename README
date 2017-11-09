@@ -22,6 +22,8 @@ Jenkins pipeline configured to kick off with a githook on checkin using PollSCM 
 
 The Jenkins pipeline builds and tests the app by calling a Makefile which uses docker to build the app.
 
+Semantic versioning is implemented using bumpversion on commit.
+
 ## TODO
 
 . Complete build system testing.
